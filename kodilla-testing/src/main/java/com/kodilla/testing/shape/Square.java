@@ -18,18 +18,20 @@ public class Square implements Shape {
     public double getField() {
         return Math.pow(side, 2);
     }
+
     @Override
-    public boolean equals(Object o){
-        if(this==o) return true;
-        if(!(o instanceof Square)) return false;
-        Square that = (Square)o;
-        if(!(side==(that.side))) return false;
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (!(o instanceof Square)) return false;
+        Square that = (Square) o;
+        if (!(side == (that.side))) return false;
         return name.equals(that.name);
     }
+
     @Override
     public int hashCode() {
         int result = name.hashCode();
-        result = 21 * result+(int)side;
+        result = 21 * result + (int) side;
         return result;
     }
 }

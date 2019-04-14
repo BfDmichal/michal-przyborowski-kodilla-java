@@ -17,20 +17,22 @@ public class Circle implements Shape {
 
     @Override
     public double getField() {
-        return Math.PI*Math.pow(radius,2);
+        return Math.PI * Math.pow(radius, 2);
     }
+
     @Override
-    public boolean equals(Object o){
-        if(this==o) return true;
-        if(!(o instanceof Circle)) return false;
-        Circle that = (Circle)o;
-        if(!(radius==(that.radius))) return false;
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (!(o instanceof Circle)) return false;
+        Circle that = (Circle) o;
+        if (!(radius == (that.radius))) return false;
         return name.equals(that.name);
     }
+
     @Override
     public int hashCode() {
         int result = name.hashCode();
-        result = 21 * result+(int)radius;
+        result = 21 * result + (int) radius;
         return result;
     }
 }

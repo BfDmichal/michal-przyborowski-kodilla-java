@@ -18,21 +18,23 @@ public class Triangle implements Shape {
 
     @Override
     public double getField() {
-            return (base/2)*height;
+        return (base / 2) * height;
     }
+
     @Override
-    public boolean equals(Object o){
-        if(this==o) return true;
-        if(!(o instanceof Circle)) return false;
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (!(o instanceof Circle)) return false;
         Triangle that = (Triangle) o;
-        if(!(base==(that.base))) return false;
-        if(!(height==(that.height))) return false;
+        if (!(base == (that.base))) return false;
+        if (!(height == (that.height))) return false;
         return name.equals(that.name);
     }
+
     @Override
     public int hashCode() {
         int result = name.hashCode();
-        result = 21 * result+(int)base+(int)height;
+        result = 21 * result + (int) base + (int) height;
         return result;
     }
 }
