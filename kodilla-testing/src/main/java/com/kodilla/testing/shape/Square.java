@@ -34,4 +34,9 @@ public class Square implements Shape {
         result = 21 * result + (int) side;
         return result;
     }
+    @Override
+    public String toString() {
+        return getShapeName()+": "+getField()+", ";
+    }
+
 }

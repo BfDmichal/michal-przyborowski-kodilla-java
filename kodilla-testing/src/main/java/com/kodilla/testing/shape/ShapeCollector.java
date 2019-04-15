@@ -26,10 +26,12 @@ public class ShapeCollector {
         return result;
     }
 
-    public void showFigures() {
+    public String showFigures() {
+        String result = "";
         for (Shape in : listOfFigures) {
-            System.out.println(in);
+            result += in.toString();
         }
+        return result;
     }
 
     public int getNumberOfFigures() {

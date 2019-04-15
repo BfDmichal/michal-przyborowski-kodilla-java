@@ -37,4 +37,8 @@ public class Triangle implements Shape {
         result = 21 * result + (int) base + (int) height;
         return result;
     }
+    @Override
+    public String toString() {
+        return getShapeName()+": "+getField()+", ";
+    }
 }

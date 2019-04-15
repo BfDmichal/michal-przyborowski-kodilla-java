@@ -71,4 +71,18 @@ public class ShapeCollectorTestSuite {
         Assert.assertTrue(result);
         Assert.assertEquals(0, collector.getNumberOfFigures());
     }
+    @Test
+    public void testShowFigures(){
+        //Given
+        ShapeCollector collector = new ShapeCollector();
+        Circle circle = new Circle("Circle",2);
+        Square square = new Square("Square", 4);
+        collector.addFigure(square);
+        collector.addFigure(circle);
+        //When
+        String result =collector.showFigures();
+        String result1 = square.toString()+""+circle.toString();
+        //Then
+        Assert.assertEquals(result,result1);
+    }
 }

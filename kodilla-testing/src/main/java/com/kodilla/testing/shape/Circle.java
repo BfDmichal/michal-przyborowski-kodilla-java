@@ -35,4 +35,9 @@ public class Circle implements Shape {
         result = 21 * result + (int) radius;
         return result;
     }
+
+    @Override
+    public String toString() {
+        return getShapeName()+": "+getField()+", ";
+    }
 }
