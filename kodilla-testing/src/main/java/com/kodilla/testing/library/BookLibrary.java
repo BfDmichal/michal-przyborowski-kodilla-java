@@ -11,7 +11,7 @@ public class BookLibrary {
     }
     public List<Book> listBooksWithCondition(String titleFragment) {
         List<Book> bookList = new ArrayList<Book>();
-        if (titleFragment.length() < 3) {
+        if (titleFragment.length() < 3)  {
             return bookList;
         }
         List<Book> list = libraryDatabase.listBookWithCondition(titleFragment);

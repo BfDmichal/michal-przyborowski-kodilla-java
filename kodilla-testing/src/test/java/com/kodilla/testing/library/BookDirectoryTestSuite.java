@@ -68,7 +68,7 @@ public class BookDirectoryTestSuite {
         Mockito.verify(libraryDatabaseMock,times(0)).listBookWithCondition(anyString());
     }
     @Test
-    public void testListBooksInHandsOf0(){
+    public void testListBooksInHandsOf0() {
         //Given
         LibraryDatabase libraryDatabaseMock = mock(LibraryDatabase.class);
         BookLibrary bookLibrary = new BookLibrary(libraryDatabaseMock);

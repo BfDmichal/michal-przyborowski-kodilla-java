@@ -24,7 +24,7 @@ public class Book {
     }
 
     @Override
-    public String toString() {
+    public String toString()  {
         return "Book{" +
                 "title='" + title + '\'' +
                 ", author='" + author + '\'' +
