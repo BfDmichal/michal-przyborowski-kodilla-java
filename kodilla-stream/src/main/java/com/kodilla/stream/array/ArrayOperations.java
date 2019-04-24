@@ -17,7 +17,7 @@ public interface ArrayOperations {
                 .map(n-> list.get(n))
                 .forEach(System.out::println);
         double average = IntStream.range(0, list.size())
-                .mapToDouble(n->list.get(n))
+                .map(n->list.get(n))
                 .average().getAsDouble();
         return average;
     }
