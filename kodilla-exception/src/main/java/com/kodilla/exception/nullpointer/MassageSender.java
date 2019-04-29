@@ -6,6 +6,6 @@ public class MassageSender {
             System.out.println("Sending massage: " + massage + "to: " + user.getName());
         } else {
             throw new MassageNotSentException("User is null");
-        }//
+        }
     }
 }

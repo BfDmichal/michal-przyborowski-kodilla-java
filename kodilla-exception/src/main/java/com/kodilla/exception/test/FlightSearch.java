@@ -26,7 +26,7 @@ public class FlightSearch {
         }
         else{
             System.out.println("Direction is disable");
-        }//
+        }
     }
 
     public static void main(String[] args) {

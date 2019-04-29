@@ -8,5 +8,5 @@ public class VideoCollector {
         ArrayList<String> videos = new ArrayList<>();
         videos.add("Extra Movie");
         return videos;
-    }//
+    }
 }

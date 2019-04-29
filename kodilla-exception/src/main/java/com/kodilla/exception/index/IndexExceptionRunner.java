@@ -14,7 +14,7 @@ public class IndexExceptionRunner {
 
             String anotherMovie = list.get(2);
             System.out.println(anotherMovie);
-        }//
+        }
     }
 
 }
