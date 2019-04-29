@@ -1,19 +1,11 @@
-package com.kodilla.stream.protfolio;
+package com.kodilla.stream.portfolio;
 
-import com.kodilla.stream.book.Book;
-import com.kodilla.stream.portfolio.Board;
-import com.kodilla.stream.portfolio.Task;
-import com.kodilla.stream.portfolio.TaskList;
-import com.kodilla.stream.portfolio.User;
 import org.junit.Assert;
 import org.junit.Test;
 
 import java.time.LocalDate;
 import java.time.Period;
-import java.time.temporal.ChronoUnit;
 import java.util.List;
-import java.util.stream.Collectors;
-import java.util.stream.IntStream;
 
 import static java.util.stream.Collectors.toList;
 
@@ -87,7 +79,7 @@ public class BoardTestSuite {
                 .collect(toList());
         //Then
         Assert.assertEquals(1, list.size());
-        Assert.assertEquals("HQLs for analysis", list.get(0).getTitle());
+        Assert.assertEquals("HQLs for analiysis", list.get(0).getTitle());
     }
 
     @Test
