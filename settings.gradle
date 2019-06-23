@@ -10,4 +10,5 @@ include 'kodilla-exception'
 include 'com.kodilla.good.patterns'
 include 'kodilla-spring'
 include 'kodilla-spring'
+include 'kodilla-patterns'
 
