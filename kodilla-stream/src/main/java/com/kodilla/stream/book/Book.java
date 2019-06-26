@@ -35,7 +35,7 @@ public final class Book {
                 "title='" + title + '\'' +
                 ", author='" + author + '\'' +
                 ", yearOfPublication=" + yearOfPublication +
-                ", signature= "+ signature + '\''+
+                ", signature= " + signature + '\'' +
                 '}';
     }
 }
