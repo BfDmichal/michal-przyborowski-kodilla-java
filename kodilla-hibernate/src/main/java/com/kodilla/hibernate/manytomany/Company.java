@@ -1,11 +1,15 @@
 package com.kodilla.hibernate.manytomany;
 
-import com.sun.istack.internal.NotNull;
+
 
 import javax.persistence.*;
+import javax.validation.constraints.NotNull;
 import java.util.ArrayList;
 import java.util.List;
-
+@NamedQuery(
+        name = "Company.searchCompanyByThreeSigns",
+        query = "FROM Company WHERE SUBSTRING(name,1,3) =:NAME"
+)
 @Entity
 @Table(name = "COMPANIES")
 public class Company {
