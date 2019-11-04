@@ -15,5 +15,7 @@ public interface CompanyDao extends CrudRepository<Company,Integer> {
 
     @Query
     List<Company> searchCompanyByThreeSigns(@Param("NAME") String name);
+    @Query
+    List<Company> retrieveCompaniesWithFragmentOfName(@Param("NAMEFRAGMENT") String nameFragment);
 
 }

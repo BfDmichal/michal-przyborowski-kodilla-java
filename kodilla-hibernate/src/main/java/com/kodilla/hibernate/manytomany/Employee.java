@@ -1,16 +1,21 @@
 package com.kodilla.hibernate.manytomany;
 
 
-
 import javax.persistence.*;
 import javax.validation.constraints.NotNull;
 import java.util.ArrayList;
 import java.util.List;
 
-@NamedQuery(
-        name = "Employee.retrieveByLastName",
-        query = "FROM Employee WHERE lastName = :LASTNAME"
-)
+@NamedQueries({
+        @NamedQuery(
+                name = "Employee.retrieveByLastName",
+                query = "FROM Employee WHERE lastName = :LASTNAME"
+        ),
+        @NamedQuery(
+                name = "Employee.retrieveEmployeesWithFragmentOfName",
+                query = "FROM Employee WHERE lastname LIKE :NAMEFRAGMENT"
+        )
+})
 @Entity
 @Table(name = "EMPLOYESS")
 public class Employee {
@@ -19,28 +24,34 @@ public class Employee {
     private String lastName;
     private List<Company> companies = new ArrayList<>();
 
-    public Employee(){}
-    public Employee(String firstName, String lastName){
+    public Employee() {
+    }
+
+    public Employee(String firstName, String lastName) {
         this.firstName = firstName;
         this.lastName = lastName;
     }
+
     @Id
     @GeneratedValue
     @NotNull
-    @Column(name = "EMPLOYEE_ID", unique=true)
+    @Column(name = "EMPLOYEE_ID", unique = true)
     public int getId() {
         return id;
     }
+
     @NotNull
     @Column(name = "FIRSTNAME")
     public String getFirstName() {
         return firstName;
     }
+
     @NotNull
     @Column(name = "LASTNAME")
     public String getLastName() {
         return lastName;
     }
+
     @ManyToMany(cascade = CascadeType.ALL)
     @JoinTable(
             name = "JOIN_COMPANY_EMPLOYEE",
